@@ -2,6 +2,7 @@ package com.github.hanyaeger.bubbleshooter;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
+import com.github.hanyaeger.bubbleshooter.scenes.TitleScene;
 
 public class BubbleShooter extends YaegerGame {
     public static void main(String[] args) {
@@ -16,6 +17,6 @@ public class BubbleShooter extends YaegerGame {
 
     @Override
     public void setupScenes() {
-
+        addScene(0, new TitleScene());
     }
 }
