@@ -1,8 +1,8 @@
-package com.github.hanyaeger.bubbleshooter;
+package com.github.hanyaeger.SpaceBubbles;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
-import com.github.hanyaeger.bubbleshooter.scenes.TitleScene;
+import com.github.hanyaeger.SpaceBubbles.scenes.TitleScene;
 
 public class BubbleShooter extends YaegerGame {
     public static void main(String[] args) {

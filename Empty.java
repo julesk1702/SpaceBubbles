@@ -1,4 +1,4 @@
-package com.github.hanyaeger.bubbleshooter;
+package com.github.hanyaeger.SpaceBubbles;
 
 public class Empty {
 }

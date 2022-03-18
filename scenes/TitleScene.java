@@ -1,4 +1,4 @@
-package com.github.hanyaeger.bubbleshooter.scenes;
+package com.github.hanyaeger.SpaceBubbles.scenes;
 
 import com.github.hanyaeger.api.scenes.StaticScene;
 
