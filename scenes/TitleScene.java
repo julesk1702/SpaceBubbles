@@ -34,7 +34,7 @@ public class TitleScene extends StaticScene {
             addEntity(spaceBubbles);
 
             var startButton = new StartButton(
-             new Coordinate2D(getWidth() /2, getHeight() / 2 + 50), bubbleShooter
+             new Coordinate2D(getWidth() /2, getHeight() / 2 + 70), bubbleShooter
             );
             addEntity(startButton);
     }

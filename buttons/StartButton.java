@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
 import com.github.hanyaeger.api.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.userinput.MouseExitListener;
+import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -16,7 +17,7 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
     private BubbleShooter bubbleShooter;
 
     public StartButton(Coordinate2D initialLocation, BubbleShooter bubbleShooter) {
-        super(initialLocation, "Play");
+        super(initialLocation, "PLAY");
         setFill(Color.WHITE);
         setFont(Font.font("Bebas Neue", FontWeight.BOLD, 30));
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
@@ -31,11 +32,13 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
 
     @Override
     public void onMouseEntered() {
-
+        setFill(Color.GRAY);
+        setCursor(Cursor.HAND);
     }
 
     @Override
     public void onMouseExited() {
-
+        setFill(Color.WHITE);
+        setCursor(Cursor.DEFAULT);
     }
 }
