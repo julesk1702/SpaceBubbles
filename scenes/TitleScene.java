@@ -1,5 +1,7 @@
 package com.github.hanyaeger.SpaceBubbles.scenes;
 
+import com.github.hanyaeger.SpaceBubbles.BubbleShooter;
+import com.github.hanyaeger.SpaceBubbles.buttons.StartButton;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
@@ -9,6 +11,12 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 public class TitleScene extends StaticScene {
+    private BubbleShooter bubbleShooter;
+
+    public TitleScene(BubbleShooter bubbleShooter){
+        this.bubbleShooter = bubbleShooter;
+    }
+
     @Override
     public void setupScene() {
         setBackgroundAudio("audio/spacetheme.mp3");
@@ -24,5 +32,10 @@ public class TitleScene extends StaticScene {
             spaceBubbles.setFill(Color.WHITE);
             spaceBubbles.setFont(Font.font("Bebas Neue", FontWeight.BOLD, 80));
             addEntity(spaceBubbles);
+
+            var startButton = new StartButton(
+             new Coordinate2D(getWidth() /2, getHeight() / 2 + 50), bubbleShooter
+            );
+            addEntity(startButton);
     }
 }
