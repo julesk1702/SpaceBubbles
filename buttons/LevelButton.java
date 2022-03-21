@@ -1,7 +1,6 @@
 package com.github.hanyaeger.SpaceBubbles.buttons;
 
 import com.github.hanyaeger.SpaceBubbles.BubbleShooter;
-import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
@@ -13,21 +12,21 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class StartButton extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
+public class LevelButton extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
     private BubbleShooter bubbleShooter;
+    private int levelId;
 
-    public StartButton(Coordinate2D initialLocation, BubbleShooter bubbleShooter) {
-        super(initialLocation, "PLAY");
+    public LevelButton(Coordinate2D initialLocation, BubbleShooter bubbleShooter, int levelId, String level) {
+        super(initialLocation, level);
         setFill(Color.WHITE);
         setFont(Font.font("Bebas Neue", FontWeight.BOLD, 30));
-        setAnchorPoint(AnchorPoint.CENTER_CENTER);
-
         this.bubbleShooter = bubbleShooter;
+        this.levelId = levelId;
     }
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        bubbleShooter.setActiveScene(1);
+        bubbleShooter.setActiveScene(levelId);
     }
 
     @Override

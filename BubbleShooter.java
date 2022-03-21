@@ -1,6 +1,7 @@
 package com.github.hanyaeger.SpaceBubbles;
 
 import com.github.hanyaeger.SpaceBubbles.scenes.GameScene;
+import com.github.hanyaeger.SpaceBubbles.scenes.LevelSelector;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 import com.github.hanyaeger.SpaceBubbles.scenes.TitleScene;
@@ -20,6 +21,7 @@ public class BubbleShooter extends YaegerGame {
     public void setupScenes() {
 
         addScene(0, new TitleScene(this));
-        addScene(1, new GameScene());
+        addScene(1, new LevelSelector(this));
+        addScene(2, new GameScene());
     }
 }
