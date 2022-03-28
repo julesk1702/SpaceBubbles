@@ -21,7 +21,7 @@ public class LevelSelector extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundAudio("audio/spacetheme.mp3");
-        setBackgroundImage("backgrounds/levelscreen1.jpg");
+        setBackgroundImage("backgrounds/background1.jpg");
     }
 
     @Override
