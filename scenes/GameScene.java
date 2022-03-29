@@ -1,8 +1,7 @@
 package com.github.hanyaeger.SpaceBubbles.scenes;
 
-import com.github.hanyaeger.SpaceBubbles.entities.EersteSoortPlaneet;
+import com.github.hanyaeger.SpaceBubbles.entities.soortPlaneet;
 import com.github.hanyaeger.SpaceBubbles.entities.Planeet;
-import com.github.hanyaeger.SpaceBubbles.entities.TweedeSoortPlaneet;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 
@@ -46,23 +45,22 @@ public class GameScene extends DynamicScene {
 
 
     }
-
+// Heb het zo aangepast dat je maar een class hebt voor planeten in te spawnen en in deze switch dus de afbeelding meegeeft als variabel.
     private Planeet getPlaneet(int xPos, int i) {
-        int type = ThreadLocalRandom.current().nextInt(0, 2);
-        switch (type) {
-            case 0:
-                return new EersteSoortPlaneet(
-                        new Coordinate2D(xPos + i * 30, 50)
-                );
-
-            case 1:
-                return new TweedeSoortPlaneet(
-                        new Coordinate2D(xPos + i * 30, 50)
-                );
-            default:
-                return new EersteSoortPlaneet(
-                        new Coordinate2D(xPos + i * 30, 50)
-                );
-        }
+        int type = ThreadLocalRandom.current().nextInt(0, 3);
+        return switch (type) {
+            case 0 -> new soortPlaneet(
+                    new Coordinate2D(xPos + i * 50, 50), "sprites/mars.png"
+            );
+            case 1 -> new soortPlaneet(
+                    new Coordinate2D(xPos + i * 50, 50), "sprites/earth.png"
+            );
+            case 2 -> new soortPlaneet(
+                    new Coordinate2D(xPos + i * 50, 50), "sprites/venus.png"
+            );
+            default -> new soortPlaneet(
+                    new Coordinate2D(xPos + i * 50, 50), "mars.png"
+            );
+        };
     }
 }

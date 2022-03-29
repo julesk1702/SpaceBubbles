@@ -21,7 +21,7 @@ public class LevelSelector extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundAudio("audio/spacetheme.mp3");
-        setBackgroundImage("backgrounds/background1.jpg");
+        setBackgroundImage("backgrounds/levelscreen1.jpg");
     }
 
     @Override
@@ -34,15 +34,5 @@ public class LevelSelector extends StaticScene {
                     new Coordinate2D(xPos, 100), bubbleShooter, level);
             addEntity(levelButton);
         }
-
-//        for (int i = 0; i < levels.size(); i++) {
-//            level = levels.get(i);
-//            levelId++;
-//            xPos += 150;
-//
-//            var levelButton = new LevelButton(
-//                    new Coordinate2D(xPos, 100), bubbleShooter, levelId, level
-//            );
-//        }
     }
 }
